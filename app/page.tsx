@@ -31,7 +31,7 @@ export default function Home() {
           Dakota Erickson
         </h1>
         
-        <nav className="hidden custom:flex"> {/* Now only displays on screens >= 750px */}
+        <nav className="hidden custom:flex">
         <ul className="flex space-x-4 sm:space-x-6">
           <li>
             <a href="#workHistory" className="text-[#e1eae2] hover:text-[#50795d]" onClick={handleWorkHistoryClick}>Work History</a>
@@ -51,37 +51,36 @@ export default function Home() {
         <HiMenu size={28} />
       </button>
 
-        {menuOpen && (
-          <nav className="absolute top-full mt-1 left-0 w-full flex flex-col items-center bg-[#121c17] rounded-lg py-4 space-y-4 sm:hidden">
-            <a href="#workHistory" className="text-[#e1eae2] hover:text-[#50795d]" onClick={handleWorkHistoryClick}>Work History</a>
-            <a href="#sideProjects" className="text-[#e1eae2] hover:text-[#50795d]" onClick={handleSideProjectsClick}>Side Projects</a>
-            <a href="/Resume.pdf" className="text-[#e1eae2] hover:text-[#50795d]" target="_blank" rel="noopener noreferrer" download="Dakota-Erickson-Resume.pdf">
-              Download Resume
-            </a>
-          </nav>
-        )}
+      {menuOpen && (
+        <nav className="absolute top-full mt-1 left-0 w-full flex flex-col items-center bg-[#121c17] rounded-lg py-4 space-y-4 sm:hidden z-10">
+          <a href="#workHistory" className="text-[#e1eae2] hover:text-[#50795d]" onClick={handleWorkHistoryClick}>
+            Work History
+          </a>
+          <a href="#sideProjects" className="text-[#e1eae2] hover:text-[#50795d]" onClick={handleSideProjectsClick}>
+            Side Projects
+          </a>
+          <a href="/Resume.pdf" className="text-[#e1eae2] hover:text-[#50795d]" target="_blank" rel="noopener noreferrer" download="Dakota-Erickson-Resume.pdf">
+            Download Resume
+          </a>
+        </nav>
+      )}
       </header>
-
-
-
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start max-w-full">
-        {activeSection === "" && (
-          <section className="flex flex-col sm:flex-row items-center justify-between p-6 sm:p-12 gap-4 sm:gap-8 max-w-full">
-            <div className="text-4xl sm:text-5xl font-extrabold" style={{ color: '#121c17' }}>
-              <p>Who am I?</p>
-            </div>
-            <div className="text-lg sm:text-xl text-slate-50 max-w-full">
-              <p>
-                I am a software engineer who is constantly seeking learning opportunities, enhancing my skills by experimenting with new technologies, and looking for ways to contribute to innovative projects.
-              </p>
-            </div>
-          </section>
-        )}
-
         <section className="w-full max-w-4xl">
+          {activeSection === "" && (
+              <div className="flex">
+                <div className="text-4xl sm:text-5xl font-extrabold mr-4" style={{ color: '#121c17' }}>
+                  <p>Who am I?</p>
+                </div>
+                <div className="text-lg sm:text-xl text-slate-50 max-w-full">
+                  <p>
+                    I am a software engineer who is constantly seeking learning opportunities, enhancing my skills by experimenting with new technologies, and looking for ways to contribute to innovative projects.
+                  </p>
+                </div>
+              </div>
+          )}
           {activeSection === "workHistory" && (
-            <section className="flex flex-col p-6 sm:p-12 gap-4 sm:gap-8 max-w-full">
-              <div className="text-4xl sm:text-5xl font-extrabold text-center sm:text-left" style={{ color: '#121c17' }}>
+            <div className="flex flex-col lg:flex-row lg:items-start">
+              <div className="text-4xl sm:text-5xl font-extrabold mr-4 mb-8" style={{ color: '#121c17' }}>
                 <p>Work History</p>
               </div>
               <div className="flex flex-col space-y-4 text-lg text-slate-50">
@@ -89,12 +88,11 @@ export default function Home() {
                 <ExperienceCard title="Software Engineer, Figure" dateRange="March 2021 - July 2023" techStack="Kotlin (Spring Boot), Apache Kafka, Docker/Kubernetes, PostgreSQL" description="I was a founding member of the private label team, working on the back end using Kotlin (Spring Boot). I created an environment that allows for loan officers to efficiently create and maintain leads and to transition leads into loan applications. This was a mix between greenfield work and integrating with existing services to support business requirements." />
                 <ExperienceCard title="Software Engineer, NetApp" dateRange="March 2021 - July 2023" techStack="Python (Flask), TypeScript (Angular)" description="I accepted a position as a software engineer at NetApp after graduating college. I worked primarily in Python (Flask), but I was exposed to many different technologies. As part of an amazing team, I always managed to deliver on what was requested while dealing with shifting priorities." />
               </div>
-            </section>
+            </div>
           )}
-
           {activeSection === "sideProjects" && (
-            <section className="flex flex-col p-6 sm:p-12 gap-4 sm:gap-8 max-w-full">
-              <div className="text-4xl sm:text-5xl font-extrabold text-center sm:text-left" style={{ color: '#121c17' }}>
+            <div className="flex flex-col lg:flex-row lg:items-start">
+              <div className="text-4xl sm:text-5xl font-extrabold mr-4 mb-8" style={{ color: '#121c17' }}>
                 <p>Side Projects</p>
               </div>
               <div className="flex flex-col space-y-4 text-lg text-slate-50">
@@ -102,10 +100,9 @@ export default function Home() {
                 <ProjectCard title="Real-time chat app" technologies="Node.js, Socket.io" description="A real-time chat app using Node.js and Socket.io, allowing users to join a room and chat. Includes geolocation for sending user location." />
                 <ProjectCard title="Blog App" technologies="Flask, SQLite" description="A blog website with full CRUD functionality, developed to learn backend principles and tools like Flask and SQLite." />
               </div>
-            </section>
+            </div>
           )}
         </section>
-      </main>
 
       <footer className="w-full h-14 rounded-full flex items-center justify-center px-8" style={{ backgroundColor: '#121c17' }}>
         <a href="https://github.com/DakotaErickson?tab=repositories" className="flex items-center gap-2 hover:underline" target="_blank" rel="noopener noreferrer">

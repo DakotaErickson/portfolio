@@ -84,9 +84,24 @@ export default function Home() {
                 <p>Work History</p>
               </div>
               <div className="flex flex-col space-y-4 text-lg text-slate-50">
-                <ExperienceCard title="Software Engineer, TaxRise" dateRange="September 2023 - Present" techStack="Python (FastAPI), Javascript (Nodejs), MySQL, Salesforce" description="I joined TaxRise as a software engineer tasked with creating and maintaining Python (FastAPI) and Javascript (Node.js) APIs. I also had the opportunity to do some serverless AWS development (Python lambdas) as well as exposure to Salesforce development." />
-                <ExperienceCard title="Software Engineer, Figure" dateRange="March 2021 - July 2023" techStack="Kotlin (Spring Boot), Apache Kafka, Docker/Kubernetes, PostgreSQL" description="I was a founding member of the private label team, working on the back end using Kotlin (Spring Boot). I created an environment that allows for loan officers to efficiently create and maintain leads and to transition leads into loan applications. This was a mix between greenfield work and integrating with existing services to support business requirements." />
-                <ExperienceCard title="Software Engineer, NetApp" dateRange="March 2021 - July 2023" techStack="Python (Flask), TypeScript (Angular)" description="I accepted a position as a software engineer at NetApp after graduating college. I worked primarily in Python (Flask), but I was exposed to many different technologies. As part of an amazing team, I always managed to deliver on what was requested while dealing with shifting priorities." />
+                <ExperienceCard 
+                title="Software Engineer, TaxRise"
+                dateRange="September 2023 - Present"
+                techStack="Python (FastAPI), Javascript (Nodejs), MySQL, Salesforce, AWS"
+                description="I joined TaxRise as a software engineer tasked with creating and maintaining APIs. I also had the opportunity to do some serverless AWS development as well as exposure to Salesforce development."
+                />
+                <ExperienceCard
+                title="Software Engineer, Figure"
+                dateRange="March 2021 - July 2023"
+                techStack="Kotlin (Spring Boot), Apache Kafka, Docker/Kubernetes, PostgreSQL"
+                description="I was a founding member of the private label team, working on the back end. I created an environment that allows for loan officers to efficiently create and maintain leads and to transition leads into loan applications. This was a mix between greenfield work and integrating with existing services to support business requirements."
+                />
+                <ExperienceCard
+                title="Software Engineer, NetApp"
+                dateRange="March 2021 - July 2023"
+                techStack="Python (Flask), TypeScript (Angular)"
+                description="I accepted a position as a software engineer at NetApp after graduating college. I worked primarily on the back end, but I did some front end work as well. My work was a mix of implementing new features as well as maintaining existing projects by contributing bug fixes."
+                />
               </div>
             </div>
           )}
@@ -96,9 +111,21 @@ export default function Home() {
                 <p>Side Projects</p>
               </div>
               <div className="flex flex-col space-y-4 text-lg text-slate-50">
-                <ProjectCard title="Portfolio website" technologies="React, Next.js, TailwindCSS" description="I created this website as an opportunity to showcase myself, but also to gain exposure to modern front end technologies." />
-                <ProjectCard title="Real-time chat app" technologies="Node.js, Socket.io" description="A real-time chat app using Node.js and Socket.io, allowing users to join a room and chat. Includes geolocation for sending user location." />
-                <ProjectCard title="Blog App" technologies="Flask, SQLite" description="A blog website with full CRUD functionality, developed to learn backend principles and tools like Flask and SQLite." />
+                <ProjectCard
+                title="Portfolio website"
+                technologies="React, Next.js, TailwindCSS"
+                description="I created this website as an opportunity to showcase myself, but also to gain exposure to modern front end technologies. Gaining experience trying to make a user friendly design that is responsive to different screen sizes has been a fun new challenge."
+                />
+                <ProjectCard
+                title="Real-time chat app"
+                technologies="Node.js, Socket.io"
+                description="A real-time chat app allowing users to join a room and chat. Messages are sent only to the rooms the user is in, and names are unique within rooms. Includes geolocation for sending user location."
+                />
+                <ProjectCard
+                title="Blog App"
+                technologies="Flask, SQLite"
+                description="A blog website with full CRUD functionality. I developed this to learn backend principles and tools. Modeling the data, creating all the relevant API endpoints, and ensuring there are no unintended side effects to the data was a fun experience."
+                />
               </div>
             </div>
           )}

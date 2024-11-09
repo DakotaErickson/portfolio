@@ -40,7 +40,7 @@ export default function Home() {
             <a href="#sideProjects" className="text-[#e1eae2] hover:text-[#50795d]" onClick={handleSideProjectsClick}>Side Projects</a>
           </li>
           <li>
-            <a href="dakotaerickson.github.io/portfolio/public/Resume.pdf" className="text-[#e1eae2] hover:text-[#50795d]" target="_blank" rel="noopener noreferrer" download="Dakota-Erickson-Resume.pdf">
+            <a href="dakotaerickson.github.io/portfolio/Resume.pdf" className="text-[#e1eae2] hover:text-[#50795d]" target="_blank" rel="noopener noreferrer" download="Dakota-Erickson-Resume.pdf">
               Download Resume
             </a>
           </li>
@@ -133,10 +133,10 @@ export default function Home() {
 
       <footer className="w-full h-14 rounded-full flex items-center justify-center px-8" style={{ backgroundColor: '#121c17' }}>
         <a href="https://github.com/DakotaErickson?tab=repositories" className="flex items-center gap-2 hover:underline" target="_blank" rel="noopener noreferrer">
-          <Image src="dakotaerickson.github.io/portfolio/public/GitHub_Logo.png" alt="Github icon" priority width={64} height={64} />
+          <Image src="dakotaerickson.github.io/portfolio/GitHub_Logo.png" alt="Github icon" priority width={64} height={64} />
         </a>
         <a href="https://linkedin.com/in/dakota-erickson" className="flex items-center gap-2 hover:underline ml-8" target="_blank" rel="noopener noreferrer">
-          <Image src="dakotaerickson.github.io/portfolio/public/Linkedin_Logo.png" alt="LinkedIn icon" priority width={64} height={64} />
+          <Image src="dakotaerickson.github.io/portfolio/Linkedin_Logo.png" alt="LinkedIn icon" priority width={64} height={64} />
         </a>
       </footer>
     </div>

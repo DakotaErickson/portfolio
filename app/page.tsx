@@ -40,7 +40,7 @@ export default function Home() {
             <a href="#sideProjects" className="text-[#e1eae2] hover:text-[#50795d]" onClick={handleSideProjectsClick}>Side Projects</a>
           </li>
           <li>
-            <a href="./../public/Resume.pdf" className="text-[#e1eae2] hover:text-[#50795d]" target="_blank" rel="noopener noreferrer" download="Dakota-Erickson-Resume.pdf">
+            <a href="/portfolio/Resume.pdf" className="text-[#e1eae2] hover:text-[#50795d]" target="_blank" rel="noopener noreferrer" download="Dakota-Erickson-Resume.pdf">
               Download Resume
             </a>
           </li>
@@ -59,7 +59,7 @@ export default function Home() {
           <a href="#sideProjects" className="text-[#e1eae2] hover:text-[#50795d]" onClick={handleSideProjectsClick}>
             Side Projects
           </a>
-          <a href="/Resume.pdf" className="text-[#e1eae2] hover:text-[#50795d]" target="_blank" rel="noopener noreferrer" download="Dakota-Erickson-Resume.pdf">
+          <a href="/portfolio/Resume.pdf" className="text-[#e1eae2] hover:text-[#50795d]" target="_blank" rel="noopener noreferrer" download="Dakota-Erickson-Resume.pdf">
             Download Resume
           </a>
         </nav>

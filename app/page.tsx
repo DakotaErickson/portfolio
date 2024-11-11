@@ -102,7 +102,7 @@ export default function Home() {
                 />
                 <ExperienceCard
                 title="Software Engineer, NetApp"
-                dateRange="March 2021 - July 2023"
+                dateRange="June 2019 - August 2020"
                 techStack="Python (Flask), TypeScript (Angular)"
                 description="I accepted a position as a software engineer at NetApp after graduating college. I worked primarily on the back end, but I did some front end work as well. My work was a mix of implementing new features as well as maintaining existing projects by contributing bug fixes."
                 />

@@ -11,10 +11,12 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        hoverGreen: "#50795d",
+        whiteText: "#e1eae2",
       },
     },
     screens: {
-      'custom': '750px',
+      'small': '750px',
     },
   },
   plugins: [],

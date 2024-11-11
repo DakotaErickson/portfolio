@@ -22,50 +22,50 @@ export default function Home() {
   const handleResetClick = () => setActiveSection("");
 
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)] overflow-x-hidden">
+    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
       <header className="w-full h-14 rounded-full flex items-center justify-between px-4 sm:px-8 whitespace-nowrap relative" style={{ backgroundColor: '#121c17' }}>
         <h1
-          className="text-slate-50 text-2xl sm:text-3xl cursor-pointer hover:text-[#50795d] truncate overflow-hidden"
+          className="text-slate-50 text-2xl sm:text-3xl cursor-pointer hover:text-hoverGreen"
           onClick={handleResetClick}
         >
           Dakota Erickson
         </h1>
         
-        <nav className="hidden custom:flex">
+        <nav className="hidden small:flex text-whiteText hover:text-hoverGreen">
         <ul className="flex space-x-4 sm:space-x-6">
           <li>
-            <a href="#workHistory" className="text-[#e1eae2] hover:text-[#50795d]" onClick={handleWorkHistoryClick}>Work History</a>
+            <a href="#workHistory" onClick={handleWorkHistoryClick}>Work History</a>
           </li>
           <li>
-            <a href="#sideProjects" className="text-[#e1eae2] hover:text-[#50795d]" onClick={handleSideProjectsClick}>Side Projects</a>
+            <a href="#sideProjects" onClick={handleSideProjectsClick}>Side Projects</a>
           </li>
           <li>
-            <a href="/portfolio/Resume.pdf" className="text-[#e1eae2] hover:text-[#50795d]" target="_blank" rel="noopener noreferrer" download="Dakota-Erickson-Resume.pdf">
+            <a href="/portfolio/Resume.pdf" target="_blank" rel="noopener noreferrer" download="Dakota-Erickson-Resume.pdf">
               Download Resume
             </a>
           </li>
         </ul>
       </nav>
 
-      <button className="custom:hidden text-[#e1eae2] hover:text-[#50795d]" onClick={() => setMenuOpen(!menuOpen)}>
+      <button className="small:hidden text-whiteText hover:text-hoverGreen" onClick={() => setMenuOpen(!menuOpen)}>
         <HiMenu size={28} />
       </button>
 
       {menuOpen && (
-        <nav className="absolute top-full mt-1 left-0 w-full flex flex-col items-center bg-[#121c17] rounded-lg py-4 space-y-4 sm:hidden z-10">
-          <a href="#workHistory" className="text-[#e1eae2] hover:text-[#50795d]" onClick={handleWorkHistoryClick}>
+        <nav className="absolute top-full mt-1 left-0 w-full flex flex-col items-center bg-[#121c17] rounded-lg py-4 space-y-4 sm:hidden z-20 text-whiteText">
+          <a href="#workHistory" onClick={handleWorkHistoryClick}>
             Work History
           </a>
-          <a href="#sideProjects" className="text-[#e1eae2] hover:text-[#50795d]" onClick={handleSideProjectsClick}>
+          <a href="#sideProjects" onClick={handleSideProjectsClick}>
             Side Projects
           </a>
-          <a href="/portfolio/Resume.pdf" className="text-[#e1eae2] hover:text-[#50795d]" target="_blank" rel="noopener noreferrer" download="Dakota-Erickson-Resume.pdf">
+          <a href="/portfolio/Resume.pdf" target="_blank" rel="noopener noreferrer" download="Dakota-Erickson-Resume.pdf">
             Download Resume
           </a>
         </nav>
       )}
       </header>
-        <section className="w-full max-w-4xl">
+        <section className={`w-full max-w-4xl transition-all duration-300 ${menuOpen ? 'mt-48' : 'mt-0'}`}>
           {activeSection === "" && (
               <div className="flex">
                 <div className="text-4xl sm:text-5xl font-extrabold mr-4" style={{ color: '#121c17' }}>

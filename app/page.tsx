@@ -31,16 +31,16 @@ export default function Home() {
           Dakota Erickson
         </h1>
         
-        <nav className="hidden small:flex text-whiteText hover:text-hoverGreen">
+        <nav className="hidden small:flex text-whiteText">
         <ul className="flex space-x-4 sm:space-x-6">
           <li>
-            <a href="#workHistory" onClick={handleWorkHistoryClick}>Work History</a>
+            <a href="#workHistory" className="hover:text-hoverGreen" onClick={handleWorkHistoryClick}>Work History</a>
           </li>
           <li>
-            <a href="#sideProjects" onClick={handleSideProjectsClick}>Side Projects</a>
+            <a href="#sideProjects" className="hover:text-hoverGreen" onClick={handleSideProjectsClick}>Side Projects</a>
           </li>
           <li>
-            <a href="/portfolio/Resume.pdf" target="_blank" rel="noopener noreferrer" download="Dakota-Erickson-Resume.pdf">
+            <a href="/portfolio/Resume.pdf" className="hover:text-hoverGreen" target="_blank" rel="noopener noreferrer" download="Dakota-Erickson-Resume.pdf">
               Download Resume
             </a>
           </li>

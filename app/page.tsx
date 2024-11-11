@@ -115,16 +115,19 @@ export default function Home() {
                 title="Portfolio website"
                 technologies="React, Next.js, TailwindCSS"
                 description="I created this website as an opportunity to showcase myself, but also to gain exposure to modern front end technologies. Gaining experience trying to make a user friendly design that is responsive to different screen sizes has been a fun new challenge."
+                link=""
                 />
                 <ProjectCard
                 title="Real-time chat app"
                 technologies="Node.js, Socket.io"
                 description="A real-time chat app allowing users to join a room and chat. Messages are sent only to the rooms the user is in, and names are unique within rooms. Includes geolocation for sending user location."
+                link="https://dakotaericksonchat.fly.dev/"
                 />
                 <ProjectCard
                 title="Blog App"
                 technologies="Flask, SQLite"
                 description="A blog website with full CRUD functionality. I developed this to learn backend principles and tools. Modeling the data, creating all the relevant API endpoints, and ensuring there are no unintended side effects to the data was a fun experience."
+                link=""
                 />
               </div>
             </div>

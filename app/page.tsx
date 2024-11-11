@@ -19,7 +19,10 @@ export default function Home() {
     setMenuOpen(false);
   };
 
-  const handleResetClick = () => setActiveSection("");
+  const handleResetClick = () => {
+    setActiveSection("");
+    setMenuOpen(false);
+  }
 
   return (
     <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
@@ -74,6 +77,7 @@ export default function Home() {
                 <div className="text-lg sm:text-xl text-slate-50 max-w-full">
                   <p>
                     I am a software engineer who is constantly seeking learning opportunities, enhancing my skills by experimenting with new technologies, and looking for ways to contribute to innovative projects.
+                    Most of my professional experience has creating the back end of web applications, but I am confident and willing to tackle programming in any domain.
                   </p>
                 </div>
               </div>
